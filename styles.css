@@ -1,0 +1,72 @@
+/* Importing Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: rgb(223, 219, 219);
+}
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 260px;
+  background: #050305;
+}
+
+.sidebar-header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 25px 20px;
+}
+
+.sidebar-header .sidebar-toggler {
+  position: absolute;
+  right: 20px;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff;
+  transition: 0.3s ease;
+}
+.sidebar-toggler span {
+  font-size: 2rem;
+}
+.sidebar-toggler:hover {
+  background: #f5f6f7;
+}
+.sidebar-nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  padding: 0 15px;
+  flex-direction: column;
+}
+.sidebar-nav .nav-item .nav-link {
+  text-decoration: none;
+  color: #f5f6f7;
+  gap: 15px;
+  align-items: center;
+  padding: 11px 15px;
+  border: 1px solid #050305;
+  transition: 0.4s ease;
+  border-radius: 10px;
+  width: 100%;
+}
+.sidebar-nav .nav-item:hover > .nav-link {
+  background: #fff;
+  color: #050305;
+}
+
