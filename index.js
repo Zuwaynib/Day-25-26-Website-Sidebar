@@ -1,4 +1,3 @@
-let sidebarToggler = document.querySelector(".sidebar-toggler");
 let sidebar = document.querySelector(".sidebar");
 let dropdownToggler = document.querySelectorAll(".dropdown-toggle");
 
@@ -26,7 +25,12 @@ dropdownToggler.forEach(dropdownToggle => {
     });    
 });
 
-sidebarToggler.addEventListener("click", () => {
-    closeAllDropdowns();
-    sidebar.classList.toggle("collapsed");
+document.querySelectorAll(".sidebar-toggler, .sidebar-menu-button" ).forEach(button => {
+    button.addEventListener("click", () => {
+        closeAllDropdowns();
+        sidebar.classList.toggle("collapsed");
+    })
 })
+
+// Collapse sidebar by default on smaller screens
+if (window.innerWidth <= 1024) document.querySelector(".sidebar").classList.toggle("collapsed");
